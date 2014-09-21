@@ -5,15 +5,19 @@ exec { "apt-get update":
   path    => ["/bin","/sbin","/usr/bin","/usr/sbin"]
 }
 
-package { "openjdk-7-jdk":
+package { "git":
   ensure  => installed,
   require => Exec["apt-get update"],
 }
 
-package { "git":
+package { "openjdk-7-jdk":
   ensure  => installed,
 }
 
 package { "maven":
+  ensure  => installed,
+}
+
+package { "dos2unix":
   ensure  => installed,
 }
