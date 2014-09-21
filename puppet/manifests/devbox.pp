@@ -12,10 +12,8 @@ package { "openjdk-7-jdk":
 
 package { "git":
   ensure  => installed,
-  require => Exec["apt-get update"],
 }
 
 package { "maven":
   ensure  => installed,
-  require => Exec["apt-get update"],
 }
